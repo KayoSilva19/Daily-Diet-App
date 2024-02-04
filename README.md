@@ -20,5 +20,18 @@ Um aplicativo que registra suas refeições diárias e avalia se você está ade
  * babel-plugin-module-resolver
  * typescript
 
+## Instalação
+  * Faça um clone do repositório do projeto no GitHub.
+  * Navegue até o diretório do projeto.
+  * Execute o seguinte comando para instalar as dependências:
+
+```
+$ npm install
+```
+
+## Running the project
+```
+$ npx expo start
+```
 
 
