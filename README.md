@@ -11,7 +11,18 @@ Um aplicativo que registra suas refeições diárias e avalia se você está ade
  * Navegação entre telas em pilha
  * Armazenamento local das refeições
 
-## Technologies Used:
+<hr/>
+<br/>
+
+<center>
+ <div><img src="./assets/Home.png" /><img src="./assets/2.png" /></center>
+<br/>
+ <div><img src="./assets/Estatísticas.png" /><img src="./assets/Estatísticas2.png" /></center>
+</center>
+<br/>
+<hr/>
+
+## Tecnologias Utilizadas:
 
  * React-Native
  * styled-components
