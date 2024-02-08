@@ -15,9 +15,9 @@ Um aplicativo que registra suas refeições diárias e avalia se você está ade
 <br/>
 
 <center>
- <div><img src="./assets/Home.png" /><img src="./assets/2.png" /></center>
+ <div><img src="./assets/Home.png" /><img src="./assets/2.png" /></div>
 <br/>
- <div><img src="./assets/Estatísticas.png" /><img src="./assets/Estatísticas2.png" /></center>
+ <div><img src="./assets/Estatísticas.png" /><img src="./assets/Estatísticas2.png" /></div>
 </center>
 <br/>
 <hr/>
