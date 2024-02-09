@@ -26,9 +26,12 @@ export default {
   },
     
   FONT_SIZE: {
-    SM: 14,
-    MD: 16,
-    LG: 18,
-    XL: 24
+    BODY_XS: 12,
+    BODY_SM: 14,
+    BODY_MD: 16,
+    TITLE_XS: 14,
+    TITLE_SM: 18,
+    TITLE_MD: 24,
+    TITLE_LG: 32,
   }
 }

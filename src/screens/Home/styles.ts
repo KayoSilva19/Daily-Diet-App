@@ -12,16 +12,19 @@ export const HeaderHome = styled.View`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
- 
 `
 export const Logo = styled.Image`
   width: 80px;
   height: 40px;
-`
+  `
 export const ImageUser = styled.Image`
  width: 40px;
  height: 40px;
  border-radius: 50px;
- border: 2px solid ${({theme}) => theme.COLORS.gray_200}
-`
-
+ border-width: 2px;
+ border-color: ${({theme}) => theme.COLORS.gray_200};
+ `
+ export const BodyHome = styled.View`
+  flex: 1;  
+ `
+ 
