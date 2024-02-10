@@ -9,16 +9,18 @@ import {
 import { PressableProps } from 'react-native';
 
 type CardFoodProps = PressableProps & {
-  foodtype: CardStylesFoodStatusProps
+  foodName: string;
+  foodType?: CardStylesFoodStatusProps;
+  foodTime: string;
 }
 
-export function CardFood({ foodtype="healthy", ...rest }: CardFoodProps) {
+export function CardFood({ foodName, foodTime, foodType='healthy', ...rest }: CardFoodProps) {
   return (
     <Container>
-      <TimeText>20:00</TimeText>
+      <TimeText>{foodTime}</TimeText>
       <FoodContent>
-        <FoodText>Whey protein com leite</FoodText>
-        <FoodStatus type={foodtype}/>
+        <FoodText>{foodName}</FoodText>
+        <FoodStatus type={foodType}/>
       </FoodContent>
     </Container>
   )

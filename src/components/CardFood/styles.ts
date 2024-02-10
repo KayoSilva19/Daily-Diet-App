@@ -1,10 +1,10 @@
 import { Pressable } from 'react-native';
 import styled, { css } from 'styled-components/native';
 
-export type CardStylesFoodStatusProps = 'healthy' |'industrialized'
+export type CardStylesFoodStatusProps = 'healthy' | 'industrialized'
 
 type Props = {
-  type: CardStylesFoodStatusProps
+  type: CardStylesFoodStatusProps 
 }
 
 export const Container = styled(Pressable)`
@@ -19,6 +19,7 @@ export const Container = styled(Pressable)`
   border-radius: 6px;
 
   padding: 16px 12px;
+  margin-bottom: 16px;
      
 `
 export const TimeText = styled.Text`
@@ -57,7 +58,7 @@ export const FoodStatus = styled.Text<Props>`
   text-align: center;
 
   background-color: ${({ theme, type }) => 
-  type === "healthy" ? theme.COLORS.green_light 
-  : theme.COLORS.red_light
+  type === 'healthy' ? theme.COLORS.green_light 
+  : theme.COLORS.red_mid
 };
 `
