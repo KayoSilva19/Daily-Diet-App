@@ -1,16 +1,18 @@
 import { Button } from '@components/Button';
-import theme from "../../theme"
+import { CardFood } from '@components/CardFood';
 
 import { 
   Container, HeaderSection, Subtitle, 
 } from './styles';
+
 import FeatherIcon  from '@expo/vector-icons/Feather'
+import theme from "../../theme"
 
 export function SectionListDiet() {
   return (
     <Container>
       <HeaderSection>
-      <Subtitle>Refições</Subtitle>
+      <Subtitle>Refeições</Subtitle>
         <Button>
           <Button.Icon>
             <FeatherIcon name="plus" size={18} color={theme.COLORS.white}/>
@@ -19,6 +21,8 @@ export function SectionListDiet() {
           <Button.Text>Nova refeição</Button.Text>
         </Button>
       </HeaderSection>
+
+      <CardFood foodtype="healthy"/>
     </Container>
   )
 }
