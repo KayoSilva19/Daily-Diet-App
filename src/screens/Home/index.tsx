@@ -1,7 +1,9 @@
-import { View, Text } from 'react-native'
-import { BodyHome, Container, HeaderHome, ImageUser, Logo, } from './styles'
+import { BodyHome, Container, HeaderHome, ImageUser, Logo,  } from './styles'
+
+import { CardPercentageDiet } from '@components/CardPercentageDiet'
+import { SectionListDiet } from '@components/SectionListDiet'
+
 import imageLogo from '@assets/logo.png'
-import CardPercentageDiet from '@components/CardPercentageDiet'
 
 export function Home() {
   const API_GITHUB_IMAGE = 'https://github.com/KayoSilva19.png'
@@ -13,7 +15,8 @@ export function Home() {
       </HeaderHome>
 
       <BodyHome>
-        <CardPercentageDiet percentage={10}/>
+        <CardPercentageDiet percentage={10} />
+        <SectionListDiet />
       </BodyHome>
     </Container>
   )

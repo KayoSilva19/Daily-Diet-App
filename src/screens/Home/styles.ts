@@ -27,4 +27,4 @@ export const ImageUser = styled.Image`
  export const BodyHome = styled.View`
   flex: 1;  
  `
- 
+

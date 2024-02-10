@@ -1,5 +1,6 @@
-import { TouchableOpacity } from "react-native";
-import styled, { css } from "styled-components/native";
+import { TouchableOpacity } from 'react-native';
+import styled, { css } from 'styled-components/native';
+import FeatherIcon  from '@expo/vector-icons/Feather'
 
 export type CardStylePercentageDietProps = boolean
 
@@ -15,14 +16,29 @@ export const Container = styled(TouchableOpacity) <Props>`
   justify-content: center;
   align-items: center;
 
+  position: relative;
+
   background-color: ${({theme, withinTheDiet}) => withinTheDiet ? theme.COLORS.green_light : theme.COLORS.red_light };
 `
 export const TextPercentage = styled.Text`
 ${({theme}) => css`
   font-family: ${theme.FONT_FAMILY.BOLD};
   font-size: ${theme.FONT_SIZE.TITLE_LG}px;
-`}
-  
-`
+  color: ${theme.COLORS.gray_100};
+`}`
+
 export const TextInfoDiet = styled.Text`
+${({theme}) => css`
+  font-family: ${theme.FONT_FAMILY.REGULAR};
+  font-size: ${theme.FONT_SIZE.BODY_SM}px;
+  color: ${theme.COLORS.gray_200};
+`}
+`
+export const ArrowUpCard = styled(FeatherIcon).attrs(({ theme }) => ({
+  size: 24,
+  color: theme.COLORS.green_dark,
+}))`
+  position: absolute;
+  top: 8px;
+  right: 8px;
 `
