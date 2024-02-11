@@ -58,7 +58,7 @@ export const FoodStatus = styled.Text<Props>`
   text-align: center;
 
   background-color: ${({ theme, type }) => 
-  type === 'healthy' ? theme.COLORS.green_light 
+  type === 'healthy' ? theme.COLORS.green_mid 
   : theme.COLORS.red_mid
 };
 `

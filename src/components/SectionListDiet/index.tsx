@@ -2,24 +2,67 @@ import { Button } from '@components/Button';
 import { CardFood } from '@components/CardFood';
 
 import { 
-  Container, HeaderSection, Subtitle, 
+  Container, HeaderSection, Subtitle, TextSectionList, 
 } from './styles';
 
 import FeatherIcon  from '@expo/vector-icons/Feather'
 import theme from "../../theme"
-import { FlatList } from 'react-native';
-import { useState } from 'react';
+import { FlatList, SectionList, Text } from 'react-native';
+import { useRef, useState } from 'react';
 import { CardStylesFoodStatusProps } from '@components/CardFood/styles';
 import { ListEmpty } from '@components/ListEmpty';
 
-type foodsProps = {
+type infosFoodProps = {
   foodName: string;
   foodTime: string;
   foodType: CardStylesFoodStatusProps;
 }
 
+type foodsProps = {
+  dateInsert: string;
+  data: infosFoodProps[];
+}
+
+
+
 export function SectionListDiet() {
-  const [foods, setFoods] = useState<foodsProps[]>([])
+
+  const [foods, setFoods] = useState<foodsProps[]>([
+    {
+      dateInsert: '20.08.24', 
+      data: [{ 
+        foodName: 'Whey protein com leite',
+        foodTime: '10:00',
+        foodType: "healthy",
+      },
+      {
+        foodName: 'X-Bacon',
+        foodTime: '20:00',
+        foodType: "industrialized",
+      }
+    ] ,
+  },
+  {
+    dateInsert: '19.08.24', 
+    data: [
+      { 
+        foodName: 'Sorvete Fit',
+        foodTime: '10:00',
+        foodType: "healthy",
+      },
+      {
+        foodName: 'X-Bacon',
+        foodTime: '20:00',
+        foodType: "industrialized",
+      },
+      { 
+      foodName: 'Whey protein com leite',
+      foodTime: '17:00',
+      foodType: "healthy",
+    },
+  ] ,
+}
+])
 
   return (
     <Container>
@@ -34,9 +77,10 @@ export function SectionListDiet() {
         </Button>
       </HeaderSection>
 
-      <FlatList 
-        data={foods}
+      <SectionList 
+        sections={foods}
         keyExtractor={(item) => item.foodName}
+        stickySectionHeadersEnabled={false} 
         renderItem={({item}) => (
           <CardFood 
             foodName={item.foodName}
@@ -44,6 +88,12 @@ export function SectionListDiet() {
             foodType={item.foodType as CardStylesFoodStatusProps} 
           />
         )}
+
+        renderSectionHeader={({ section: {dateInsert} }) => 
+        <TextSectionList>
+          {dateInsert}
+        </TextSectionList> 
+    }
 
         ListEmptyComponent={<ListEmpty />}
 

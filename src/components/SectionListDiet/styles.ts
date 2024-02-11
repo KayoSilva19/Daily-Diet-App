@@ -15,3 +15,12 @@ ${({theme}) => css`
   font-size: ${theme.FONT_SIZE.BODY_MD}px;
   color: ${theme.COLORS.gray_100};
 `}`
+
+export const TextSectionList = styled.Text`
+${({theme}) => css`
+  font-family: ${theme.FONT_FAMILY.BOLD};
+  font-size: ${theme.FONT_SIZE.TITLE_SM}px;
+  color: ${theme.COLORS.gray_100};
+`}
+  margin-bottom: 8px;
+`
