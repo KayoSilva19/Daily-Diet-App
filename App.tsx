@@ -3,8 +3,8 @@ import { useFonts, Inter_400Regular, Inter_700Bold } from '@expo-google-fonts/in
 import { ThemeProvider } from 'styled-components'
 import defaultTheme from './src/theme'
 
-import { Home } from '@screens/Home';
 import Loading from '@components/Loading';
+import { Routes } from '@routes/index';
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -20,7 +20,7 @@ export default function App() {
       translucent
     />
 
-    { fontsLoaded ?  <Home /> : <Loading/> }
+    { fontsLoaded ?  <Routes /> : <Loading/> }
    
    </ThemeProvider>
   );

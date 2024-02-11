@@ -7,8 +7,10 @@ import {
 
 import FeatherIcon  from '@expo/vector-icons/Feather'
 import theme from "../../theme"
-import { FlatList, SectionList, Text } from 'react-native';
-import { useRef, useState } from 'react';
+import { useNavigation } from '@react-navigation/native';
+
+import { SectionList} from 'react-native';
+import { useState } from 'react';
 import { CardStylesFoodStatusProps } from '@components/CardFood/styles';
 import { ListEmpty } from '@components/ListEmpty';
 
@@ -24,9 +26,7 @@ type foodsProps = {
 }
 
 
-
 export function SectionListDiet() {
-
   const [foods, setFoods] = useState<foodsProps[]>([
     {
       dateInsert: '20.08.24', 
@@ -64,11 +64,16 @@ export function SectionListDiet() {
 }
 ])
 
+  const navigation  = useNavigation()
+  function handleNewSnack() {
+    navigation.navigate('PercentageDiet')
+  }
+
   return (
     <Container>
       <HeaderSection>
       <Subtitle>Refeições</Subtitle>
-        <Button>
+        <Button onPress={handleNewSnack}>
           <Button.Icon>
             <FeatherIcon name="plus" size={18} color={theme.COLORS.white}/>
           </Button.Icon>
