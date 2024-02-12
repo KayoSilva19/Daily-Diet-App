@@ -15,7 +15,10 @@ export function Home() {
       </HeaderHome>
 
       <BodyHome>
-        <CardPercentageDiet percentage={10} />
+        <CardPercentageDiet 
+          percentage="30,21%" 
+          withinTheDiet={false}
+        />
         <SectionListDiet />
       </BodyHome>
     </Container>

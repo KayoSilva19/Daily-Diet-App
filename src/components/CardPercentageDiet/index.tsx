@@ -1,23 +1,35 @@
+import { useNavigation } from '@react-navigation/native';
 import { 
   CardStylePercentageDietProps, 
   Container, 
   ArrowUpCard, 
-  TextInfoDiet, 
+  SubTitle, 
   TextPercentage 
 } from './styles';
 import { TouchableOpacityProps } from 'react-native';
 
 type CardPercentageDietProps = TouchableOpacityProps & {
-  percentage: number;
+  percentage: string;
   withinTheDiet?: CardStylePercentageDietProps;
 }
+  
+export function CardPercentageDiet({ percentage, withinTheDiet = true,...rest }: CardPercentageDietProps) { 
+  
+  const navigation = useNavigation()
+  function handlePercentage() {
+    navigation.navigate('PercentageDiet')
+  }
 
-export function CardPercentageDiet({ percentage, withinTheDiet = true,...rest }: CardPercentageDietProps) {
   return (
-    <Container withinTheDiet={withinTheDiet} {...rest} activeOpacity={0.7}>
+    <Container 
+      onPress={handlePercentage} 
+      withinTheDiet={withinTheDiet} 
+      {...rest} 
+      activeOpacity={0.7}
+    >
       <TextPercentage>{percentage}</TextPercentage>
-      <TextInfoDiet>das refeições dentro da dieta</TextInfoDiet>
-     <ArrowUpCard name="arrow-up-right"/>
+      <SubTitle>das refeições dentro da dieta</SubTitle>
+     <ArrowUpCard name="arrow-up-right" withinTheDiet={withinTheDiet}/>
     </Container>
   )
 }

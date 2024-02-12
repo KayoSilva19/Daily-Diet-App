@@ -27,16 +27,16 @@ ${({theme}) => css`
   color: ${theme.COLORS.gray_100};
 `}`
 
-export const TextInfoDiet = styled.Text`
+export const SubTitle = styled.Text`
 ${({theme}) => css`
   font-family: ${theme.FONT_FAMILY.REGULAR};
   font-size: ${theme.FONT_SIZE.BODY_SM}px;
   color: ${theme.COLORS.gray_200};
 `}
 `
-export const ArrowUpCard = styled(FeatherIcon).attrs(({ theme }) => ({
+export const ArrowUpCard = styled(FeatherIcon).attrs<Props>(({ theme, withinTheDiet }) => ({
   size: 24,
-  color: theme.COLORS.green_dark,
+  color: withinTheDiet ? theme.COLORS.green_dark : theme.COLORS.red_dark,
 }))`
   position: absolute;
   top: 8px;

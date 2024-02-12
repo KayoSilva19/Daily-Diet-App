@@ -66,7 +66,7 @@ export function SectionListDiet() {
 
   const navigation  = useNavigation()
   function handleNewSnack() {
-    navigation.navigate('PercentageDiet')
+
   }
 
   return (

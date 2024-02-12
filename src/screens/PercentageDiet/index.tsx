@@ -1,9 +1,16 @@
-import { Container, TextContainer } from "./styles";
+import { HeaderGeneral } from "@components/HeaderGeneral";
+import { BodyContent, Container } from "./styles";
 
 export function PercentageDiet() {
   return (
     <Container>
-      <TextContainer>Aqui</TextContainer>
+      <HeaderGeneral 
+        percentage="30,21%" 
+        subtitle        
+        withinTheDiet={false}
+      />
+
+      <BodyContent></BodyContent>
     </Container>
   )
 }

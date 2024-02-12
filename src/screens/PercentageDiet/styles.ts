@@ -4,9 +4,10 @@ import styled from "styled-components/native";
 
 export const Container = styled(SafeAreaView)`
   flex: 1;
-  padding: 0px 24px;
+  
 `
-export const TextContainer = styled.Text`
-
+export const BodyContent = styled.Text`
+  flex: 1;
+  padding: 0px 24px;
  
 `
