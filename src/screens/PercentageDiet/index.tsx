@@ -1,5 +1,6 @@
 import { HeaderGeneral } from "@components/HeaderGeneral";
 import { BodyContent, Container } from "./styles";
+import { StatisticsGeneral } from "@components/StatisticsGeneral";
 
 export function PercentageDiet() {
   return (
@@ -10,7 +11,9 @@ export function PercentageDiet() {
         withinTheDiet={false}
       />
 
-      <BodyContent></BodyContent>
+      <BodyContent>
+        <StatisticsGeneral />
+      </BodyContent>
     </Container>
   )
 }
