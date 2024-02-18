@@ -1,7 +1,7 @@
 import FeatherIcon  from '@expo/vector-icons/Feather'
 import styled, { css } from 'styled-components/native';
 
-export type HeaderStylesProps = boolean
+export type HeaderStylesProps = 'industrialized' | 'healthy' | string
 
 type Props = {
   withinTheDiet: HeaderStylesProps
@@ -17,7 +17,7 @@ export const Container = styled.View<Props>`
 
   padding: 24px 24px;
 
-  background-color: ${({ theme, withinTheDiet }) => withinTheDiet 
+  background-color: ${({ theme, withinTheDiet }) => withinTheDiet === 'healthy'
   ? theme.COLORS.green_light 
   : theme.COLORS.red_light }; 
 `;
@@ -48,7 +48,7 @@ export const BackButton = styled.TouchableOpacity`
 
 export const BackIcon = styled(FeatherIcon).attrs<Props>(({ theme, withinTheDiet }) => ({
   size: 24,
-  color: withinTheDiet ? theme.COLORS.green_dark : theme.COLORS.red_dark,
+  color: withinTheDiet === 'healthy' ? theme.COLORS.green_dark : theme.COLORS.red_dark,
 }))`
 
 `;

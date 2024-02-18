@@ -3,9 +3,9 @@ export declare global {
     interface RootParamList {
       Home: undefined;
       PercentageDiet: undefined;
-      // players: {
-      //   group: string;
-      // }
+      FoodInformation: {
+        id: string;
+      }
     }
   }
 }

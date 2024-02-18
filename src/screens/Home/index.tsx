@@ -6,7 +6,7 @@ import { SectionListDiet } from '@components/SectionListDiet'
 import imageLogo from '@assets/logo.png'
 
 export function Home() {
-  const API_GITHUB_IMAGE = 'https://github.com/KayoSilva19.png'
+  const API_GITHUB_IMAGE = 'https://github.com/kayoSilva19.png'
   return (
     <Container>
       <HeaderHome>

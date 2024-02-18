@@ -22,3 +22,7 @@ export const TitleStatistics = styled.Text`
   `}
   margin-bottom: 11px;
 `
+export const ContainerFood = styled.View`
+  flex-direction: row;
+  gap: 12px;
+`

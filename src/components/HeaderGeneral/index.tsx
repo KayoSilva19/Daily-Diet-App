@@ -4,12 +4,12 @@ import theme from 'src/theme';
 import { useNavigation } from '@react-navigation/native';
 
 type HeaderGeneralProps = TouchableOpacityProps &{
-  percentage: string;
+  percentage?: string;
   subtitle?: boolean;
-  withinTheDiet: HeaderStylesProps;
+  withinTheDiet?: HeaderStylesProps;
 }
 
-export function HeaderGeneral({ percentage, subtitle, withinTheDiet = true, ...rest }: HeaderGeneralProps) {
+export function HeaderGeneral({ percentage, subtitle, withinTheDiet = 'healthy', ...rest }: HeaderGeneralProps) {
   const { COLORS } = theme
   const navigation = useNavigation()
 
@@ -21,7 +21,7 @@ export function HeaderGeneral({ percentage, subtitle, withinTheDiet = true, ...r
     <Container withinTheDiet={withinTheDiet}>
       <StatusBar 
         barStyle="dark-content" 
-        backgroundColor={ withinTheDiet ? COLORS.green_light : COLORS.red_light }
+        backgroundColor={ withinTheDiet === 'healthy' ? COLORS.green_light : COLORS.red_light }
         translucent
       />
 

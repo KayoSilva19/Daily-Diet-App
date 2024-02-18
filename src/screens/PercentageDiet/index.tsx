@@ -8,7 +8,7 @@ export function PercentageDiet() {
       <HeaderGeneral 
         percentage="30,21%" 
         subtitle        
-        withinTheDiet={false}
+        withinTheDiet='industrialized'
       />
 
       <BodyContent>

@@ -16,7 +16,7 @@ type CardFoodProps = PressableProps & {
 
 export function CardFood({ foodName, foodTime, foodType='healthy', ...rest }: CardFoodProps) {
   return (
-    <Container>
+    <Container {...rest}>
       <TimeText>{foodTime}</TimeText>
       <FoodContent>
         <FoodText>{foodName}</FoodText>
