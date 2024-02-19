@@ -1,32 +1,34 @@
 import { ReactNode } from 'react';
 import { 
-  ButtonContainer, TextButton, 
+  ButtonContainer, ButtonStylesProps, TextButton, 
 } from './styles';
 import { TouchableOpacityProps } from 'react-native';
 
 type ButtonProps = TouchableOpacityProps & {
-  children: ReactNode;
+  children: ReactNode
+  type?: ButtonStylesProps
 }
 
 type ButtonTextProps = {
   children: ReactNode;
+  type?: ButtonStylesProps
 }
 
 type ButtonIconProps = {
   children: ReactNode;
 }
 
-function Button({ children, ...rest }: ButtonProps) {
+function Button({ type = 'Primary', children, ...rest }: ButtonProps) {
   return (
-    <ButtonContainer {...rest} activeOpacity={0.7}>
+    <ButtonContainer type={type} {...rest} activeOpacity={0.7}>
       {children}
     </ButtonContainer>
   )
 }
 
-function ButtonText({ children }:ButtonTextProps) {
+function ButtonText({ type = 'Primary', children }:ButtonTextProps) {
   return (
-    <TextButton>{children}</TextButton>
+    <TextButton type={type}>{children}</TextButton>
   )
 }
 

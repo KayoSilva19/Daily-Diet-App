@@ -7,7 +7,7 @@ import {
 
 import FeatherIcon  from '@expo/vector-icons/Feather'
 import theme from "../../theme"
-import { Link, useNavigation } from '@react-navigation/native';
+import { useNavigation } from '@react-navigation/native';
 
 import { SectionList} from 'react-native';
 import { useState } from 'react';
@@ -39,7 +39,7 @@ export function SectionListDiet() {
     <Container>
       <HeaderSection>
       <Subtitle>Refeições</Subtitle>
-        <Button>
+        <Button >
           <Button.Icon>
             <FeatherIcon name="plus" size={18} color={theme.COLORS.white}/>
           </Button.Icon>
