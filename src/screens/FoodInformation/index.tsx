@@ -26,7 +26,11 @@ export function FoodInformation() {
 
   return (
     <Container>
-      <HeaderGeneral withinTheDiet={filteredFood?.foodType}/>
+      <HeaderGeneral 
+        withinTheDiet={filteredFood?.foodType} 
+        title='Refeições' 
+        headerInfo={true} 
+      />
       <InfoFoods food={filteredFood!}/>
      <ContainerFooter>
      <Button>

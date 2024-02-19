@@ -4,7 +4,8 @@ import styled, { css } from 'styled-components/native';
 export type HeaderStylesProps = 'industrialized' | 'healthy' | string
 
 type Props = {
-  withinTheDiet: HeaderStylesProps
+  headerInfo?: boolean
+  withinTheDiet?: HeaderStylesProps
 }
 
 export const Container = styled.View<Props>`
@@ -13,9 +14,9 @@ export const Container = styled.View<Props>`
   height: 200px;
   
   align-items: center;
-  justify-content: center;
+  justify-content: ${({headerInfo}) => headerInfo === true ? 'none' : 'center'};
 
-  padding: 24px 24px;
+  padding: 50px 24px;
 
   background-color: ${({ theme, withinTheDiet }) => withinTheDiet === 'healthy'
   ? theme.COLORS.green_light 
@@ -23,10 +24,10 @@ export const Container = styled.View<Props>`
 `;
 
 
-export const Title = styled.Text`
-  ${({theme}) => css`
+export const Title = styled.Text<Props>`
+  ${({theme, headerInfo}) => css`
     font-family: ${theme.FONT_FAMILY.BOLD};
-    font-size: ${theme.FONT_SIZE.TITLE_LG}px;
+    font-size: ${headerInfo === true ? theme.FONT_SIZE.TITLE_SM : theme.FONT_SIZE.TITLE_LG}px;
     color: ${theme.COLORS.gray_200};
   `}
 `;
@@ -40,9 +41,9 @@ ${({theme}) => css`
 `;
 
 
-export const BackButton = styled.TouchableOpacity`
+export const BackButton = styled.TouchableOpacity<Props>`
   position: absolute;
-  top: 24px;
+  top: ${({headerInfo}) => headerInfo === true ? 50 : 24 }px;
   left: 24px;
 `;
 
