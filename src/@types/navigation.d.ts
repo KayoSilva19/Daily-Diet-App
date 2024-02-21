@@ -5,7 +5,8 @@ export declare global {
       PercentageDiet: undefined;
       FoodInformation: {
         id: string;
-      }
+      },
+      EditSnack: undefined;
     }
   }
 }

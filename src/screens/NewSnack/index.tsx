@@ -1,4 +1,4 @@
-export function Snack() {
+export function NewSnack() {
   return(
     <>
     </>

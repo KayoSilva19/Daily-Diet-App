@@ -1,4 +1,4 @@
-import { useRoute } from "@react-navigation/native";
+import { useNavigation, useRoute } from "@react-navigation/native";
 import { Container, ContainerFooter } from "./styles";
 
 import { FOODS } from "@utils/data/Foods";
@@ -24,6 +24,11 @@ export function FoodInformation() {
   FOODS.map((item) => item.data).flat()
   .find((food) => food.id === id)
 
+  const navigation = useNavigation()
+  function handleEditSnack() {
+    navigation.navigate('EditSnack')
+  }
+
   return (
     <Container>
       <HeaderGeneral 
@@ -33,7 +38,7 @@ export function FoodInformation() {
       />
       <InfoFoods food={filteredFood!}/>
      <ContainerFooter>
-     <Button>
+     <Button onPress={handleEditSnack}>
         <Button.Icon>
           <FeatherIcon 
             name='edit-3'
