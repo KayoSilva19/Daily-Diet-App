@@ -7,6 +7,7 @@ const FOODS = [
         foodDescription: 'Sanduíche de pão integral com atum e salada de alface e tomate',
         foodTime: '10:00',
         foodType: 'healthy',
+        dateInsert: '20.08.24', 
       },
       {
         id: '2',
@@ -14,6 +15,7 @@ const FOODS = [
         foodDescription: 'Sanduíche de pão integral com atum e salada de alface e tomate',
         foodTime: '20:00',
         foodType: 'industrialized',
+        dateInsert: '20.08.24', 
       }
     ] ,
   },
@@ -26,6 +28,7 @@ const FOODS = [
         foodDescription: 'Sanduíche de pão integral com atum e salada de alface e tomate',
         foodTime: '10:00',
         foodType: 'healthy',
+        dateInsert: '19.08.24', 
       },
       {
         id: '4',
@@ -33,6 +36,7 @@ const FOODS = [
         foodDescription: 'Sanduíche de pão integral com atum e salada de alface e tomate',
         foodTime: '20:00',
         foodType: 'industrialized',
+        dateInsert: '19.08.24', 
       },
       { 
         id: '5',
@@ -40,6 +44,7 @@ const FOODS = [
         foodDescription: 'Sanduíche de pão integral com atum e salada de alface e tomate',
         foodTime: '17:00',
         foodType: 'healthy',
+        dateInsert: '19.08.24', 
     },
   ] ,
 }

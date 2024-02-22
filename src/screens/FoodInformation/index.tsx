@@ -25,8 +25,8 @@ export function FoodInformation() {
   .find((food) => food.id === id)
 
   const navigation = useNavigation()
-  function handleEditSnack() {
-    navigation.navigate('EditSnack')
+  function handleEditSnack(id: string) {
+    navigation.navigate('EditSnack', { id })
   }
 
   return (
@@ -38,7 +38,7 @@ export function FoodInformation() {
       />
       <InfoFoods food={filteredFood!}/>
      <ContainerFooter>
-     <Button onPress={handleEditSnack}>
+     <Button onPress={() => handleEditSnack(id)}>
         <Button.Icon>
           <FeatherIcon 
             name='edit-3'

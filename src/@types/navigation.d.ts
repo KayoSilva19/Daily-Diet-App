@@ -6,7 +6,9 @@ export declare global {
       FoodInformation: {
         id: string;
       },
-      EditSnack: undefined;
+      EditSnack: {
+        id: string;
+      }
     }
   }
 }

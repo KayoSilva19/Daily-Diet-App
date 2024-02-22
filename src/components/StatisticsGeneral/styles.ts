@@ -10,7 +10,7 @@ export const Container = styled.View`
   border-top-right-radius: 20px;
   border-top-left-radius: 20px;
 
-  top: -33px;
+  top: -24px;
   background-color: ${({theme}) => theme.COLORS.gray_700};
 `
 
