@@ -1,4 +1,3 @@
-import { StatusBar, Text } from 'react-native';
 import { Container, ContentButton, ContentForm, FormData } from './styles';
 
 import { HeaderNewSnack } from '@components/HeaderNewSanck';
@@ -6,6 +5,7 @@ import { Input } from '@components/Input';
 import { Button } from '@components/Button';
 import { useRoute } from '@react-navigation/native';
 import { FOODS } from '@utils/data/Foods';
+import { ButtonDiet } from '@components/ButtonDiet';
 
 type RouteParams = {
   id: string
@@ -34,8 +34,12 @@ export function EditSnack() {
           <Input type='small'title='Hora'  nameInput={filteredFood?.foodTime}/>
         </ContentForm>
         <ContentForm>
-          {/* <Input type='small' />
-          <Input type='small'/> */}
+          <ButtonDiet isSelected={filteredFood?.foodType}>
+            <ButtonDiet.Icon  type='healthy' />
+          </ButtonDiet>
+          <ButtonDiet TextStyleProps='Não'>
+            <ButtonDiet.Icon type='industrialized'/>
+          </ButtonDiet>
         </ContentForm>
       </FormData>
       <ContentButton>
